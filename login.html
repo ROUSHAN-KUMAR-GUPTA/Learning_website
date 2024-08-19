@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Great Job !");
+    });
+  });
+  </script>
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #dd980e;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<img src="https://i.pinimg.com/originals/c5/c2/01/c5c201e3b60cf5c03cd6fb3092a5940b.jpg">
+				<img src="https://img.freepik.com/premium-vector/instagram-logo-vector_768467-330.jpg">
+				<img src="https://png.pngtree.com/png-clipart/20180506/ourmid/pngtree-twitter-icon-logo-png-image_3560523.png">
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="index.html">
+				<div class="inp">
+					<img src="https://png.pngtree.com/png-vector/20191024/ourmid/pngtree-user-icon-isolated-on-abstract-background-png-image_1861930.jpg"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVNqnVe0vULQtROs-rF7_af7NYzCJXvXe6HBa7wquhQ1r3by2u46YtUVDzuO5rcR5Efw&usqp=CAU"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg"><span>Sign in with Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form id="register" class="input-group">
+				<input type="text" class="input-field" placeholder="Full Name" required="required">
+				<input type="email" class="input-field" placeholder="Email Address" required="required">
+				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
